@@ -1,0 +1,49 @@
+:root {
+  --rosa: #ff8fab;
+  --rosa-escuro: #c4457a;
+  --rosa-claro: #ffd1de;
+  --verde: #2ecc71;
+  --fundo: #fff0f4;
+  --texto: #5c3a48;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--fundo); color: var(--texto); }
+main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+h2 { color: var(--rosa-escuro); font-size: 1.9rem; margin: 40px 0 20px; text-align: center; }
+.topo { background: linear-gradient(135deg, var(--rosa), var(--rosa-claro)); color: white; text-align: center; padding: 40px 20px; }
+.topo h1 { font-size: 2.6rem; text-shadow: 2px 2px 0 rgba(0,0,0,0.15); }
+.autora { margin-top: 8px; font-weight: bold; }
+.plumbob { width: 40px; height: 70px; margin: 0 auto 16px; background: linear-gradient(135deg, #7dffb0, var(--verde), #1a8f4b); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); animation: girar 3s linear infinite; }
+@keyframes girar {
+  0% { transform: translateY(0) rotateY(0deg); }
+  50% { transform: translateY(-8px) rotateY(180deg); }
+  100% { transform: translateY(0) rotateY(360deg); }
+}
+.moradores { display: flex; flex-wrap: wrap; gap: 20px; }
+.sim { flex: 1 1 260px; background: white; border-radius: 20px; padding: 24px; border-bottom: 6px solid var(--rosa); box-shadow: 0 6px 16px rgba(196,69,122,0.15); }
+.avatar { font-size: 60px; text-align: center; transition: filter 0.4s; }
+.sim:hover .avatar { filter: hue-rotate(120deg) drop-shadow(0 0 8px var(--verde)); }
+.sim h3 { text-align: center; }
+.traco { text-align: center; font-size: 0.9rem; opacity: 0.7; margin-bottom: 12px; }
+.sim p { font-size: 0.85rem; margin-top: 8px; }
+.barra { height: 12px; background: #f1e4ec; border-radius: 6px; overflow: hidden; }
+.barra span { display: block; height: 100%; }
+.alta { background: var(--verde); }
+.media { background: #f1c40f; }
+.baixa { background: #e74c3c; }
+.planta { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 120px 120px 80px; grid-template-areas: "sala cozinha cozinha" "quarto1 quarto2 banheiro" "quintal quintal quintal"; gap: 6px; background: var(--texto); padding: 6px; border-radius: 10px; }
+.planta div { display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 6px; }
+.sala { grid-area: sala; background: #ffd6e8; }
+.cozinha { grid-area: cozinha; background: #fff3b0; }
+.quarto1 { grid-area: quarto1; background: #d6e4ff; }
+.quarto2 { grid-area: quarto2; background: #e8d6ff; }
+.banheiro { grid-area: banheiro; background: #c8f7f0; }
+.quintal { grid-area: quintal; background: #b8f2c9; }
+.objetivos { list-style: none; background: white; border-radius: 16px; padding: 20px; font-size: 1.1rem; }
+.objetivos li { padding: 8px 0; }
+.feito { color: var(--verde); text-decoration: line-through; }
+footer { text-align: center; padding: 30px; font-size: 0.9rem; opacity: 0.7; }
+@media (max-width: 600px) {
+  .topo h1 { font-size: 2rem; }
+  .planta div { font-size: 0.75rem; text-align: center; }
+}
